@@ -14,9 +14,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         
-      - name: Build formatter_lib
-        run:
-          cd formatter_lib
-          cmake -B build
-          cmake --build build
-           
+      - name: Configure Project
+        uses: threeal/cmake-action@v1.3.0
+        
+      - name: Build Project
+        run: cmake --build build
+
