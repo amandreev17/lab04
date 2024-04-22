@@ -9,8 +9,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.2
 
-      - name: Configure and Build Project
+      - name: Configure and Build formatter_lib
         run: |
           cd formatter_lib
+          cmake -B build
+          cmake --build build
+      - name: Configure and Build formatter_ex_lib
+        run: |
+          cd formatter_ex_lib
+          cmake -B build
+          cmake --build build
+      - name: Configure and Build hello_world_application
+        run: |
+          cd hello_world_application
           cmake -B build
           cmake --build build
