@@ -24,3 +24,13 @@ jobs:
           cd hello_world_application
           cmake -B build
           cmake --build build
+      - name: Configure and Build solver_application
+        run: |
+          cd solver_application
+          cmake -B build
+          cmake --build build
+      - name: Configure and Build solver_lib
+        run: |
+          cd solver_lib
+          cmake -B build
+          cmake --build build
